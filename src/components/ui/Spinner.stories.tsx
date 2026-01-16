@@ -1,0 +1,46 @@
+import type { Meta, StoryObj } from '@storybook/react'
+import { Spinner } from './Spinner'
+
+const meta: Meta<typeof Spinner> = {
+  title: 'UI/Spinner',
+  component: Spinner,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+}
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {
+    size: 'md',
+  },
+}
+
+export const Small: Story = {
+  args: {
+    size: 'sm',
+  },
+}
+
+export const Large: Story = {
+  args: {
+    size: 'lg',
+  },
+}
+
+export const InCard: Story = {
+  render: () => (
+    <div className="bg-white rounded-2xl shadow-lg p-6 w-80 h-48 flex items-center justify-center">
+      <Spinner size="lg" />
+    </div>
+  ),
+}
