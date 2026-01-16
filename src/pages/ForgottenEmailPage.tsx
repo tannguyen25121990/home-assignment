@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Card } from '../components/ui/Card'
-import { Button } from '../components/ui/Button'
-import { Input } from '../components/ui/Input'
-import { Spinner } from '../components/ui/Spinner'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Input } from '@/components/ui/Input'
+import { Spinner } from '@/components/ui/Spinner'
 
 type PageState = 'form' | 'fading' | 'loading' | 'success'
 
@@ -73,7 +73,7 @@ export function ForgottenEmailPage() {
               {t('forgottenEmail.successMessage', { firstName, lastName })}
             </h2>
             <Link to="/" className="text-primary hover:underline font-medium">
-              ← Back to Login
+              ← {t('common.backToLogin')}
             </Link>
           </div>
         ) : (
@@ -121,7 +121,7 @@ export function ForgottenEmailPage() {
 
                 <div className="text-center">
                   <Link to="/" className="text-primary hover:underline text-sm font-medium">
-                    ← Back to Login
+                    ← {t('common.backToLogin')}
                   </Link>
                 </div>
               </form>

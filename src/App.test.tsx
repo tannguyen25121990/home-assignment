@@ -1,8 +1,8 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import { LoginPage } from './pages/LoginPage'
-import { ForgottenEmailPage } from './pages/ForgottenEmailPage'
+import { LoginPage } from '@/pages/LoginPage'
+import { ForgottenEmailPage } from '@/pages/ForgottenEmailPage'
 
 // Mock i18n for tests
 vi.mock('react-i18next', async () => {
@@ -23,6 +23,7 @@ vi.mock('react-i18next', async () => {
           'common.forgottenEmail': 'Forgotten your email?',
           'common.firstName': 'First Name',
           'common.lastName': 'Last Name',
+          'common.backToLogin': 'Back to Login',
           'forgottenEmail.title': 'Forgotten Email',
           'forgottenEmail.description': 'If you have forgotten your email...',
           'forgottenEmail.firstNamePlaceholder': 'Enter your first name',

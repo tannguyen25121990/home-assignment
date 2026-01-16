@@ -6,7 +6,8 @@
     "email": "Email",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "forgottenEmail": "Forgotten your email?"
+    "forgottenEmail": "Forgotten your email?",
+    "backToLogin": "Back to Login"
   },
   "login": {
     "title": "Welcome Back",

@@ -6,7 +6,8 @@
     "email": "メールアドレス",
     "firstName": "名",
     "lastName": "姓",
-    "forgottenEmail": "メールアドレスをお忘れですか？"
+    "forgottenEmail": "メールアドレスをお忘れですか？",
+    "backToLogin": "ログインに戻る"
   },
   "login": {
     "title": "おかえりなさい",

@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { LoginPage } from './pages/LoginPage'
-import { ForgottenEmailPage } from './pages/ForgottenEmailPage'
-import { LanguagePicker } from './components/LanguagePicker'
-import './i18n'
-import './index.css'
+import { LoginPage } from '@/pages/LoginPage'
+import { ForgottenEmailPage } from '@/pages/ForgottenEmailPage'
+import { LanguagePicker } from '@/components/LanguagePicker'
+import '@/i18n'
+import '@/index.css'
 
 function App() {
   return (
