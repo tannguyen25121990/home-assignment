@@ -105,7 +105,7 @@ This project is a prototype. The following items would need attention for produc
 
 The app is deployed on Vercel with CI/CD pipeline.
 
-**Live Demo**: [Coming soon]
+**Live Demo**: [https://home-assignment-mauve.vercel.app](https://home-assignment-mauve.vercel.app)
 
 ## License
 
