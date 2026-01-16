@@ -56,9 +56,9 @@ export function ForgottenEmailPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <Card animate="slide-down-bounce" className="w-full max-w-2xl">
+      <Card animate="slide-down-bounce" className="w-full max-w-2xl min-h-[380px]">
         {pageState === 'loading' ? (
-          <div className="animate-fade-in flex items-center justify-center py-16">
+          <div className="animate-fade-in flex items-center justify-center h-full min-h-[332px]">
             <Spinner size="lg" />
           </div>
         ) : pageState === 'success' ? (

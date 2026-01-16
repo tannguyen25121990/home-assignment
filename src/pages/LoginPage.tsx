@@ -79,10 +79,10 @@ export function LoginPage() {
       ) : (
         <Card
           animate={isCardExiting ? 'slide-up' : 'slide-down-bounce'}
-          className="w-full max-w-md"
+          className="w-full max-w-md min-h-[280px]"
         >
           {pageState === 'loading' ? (
-            <div className="animate-fade-in flex items-center justify-center py-12">
+            <div className="animate-fade-in flex items-center justify-center h-full min-h-[232px]">
               <Spinner size="lg" />
             </div>
           ) : (
