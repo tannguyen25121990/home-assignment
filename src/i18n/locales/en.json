@@ -1,0 +1,30 @@
+{
+  "common": {
+    "login": "Login",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "email": "Email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "forgottenEmail": "Forgotten your email?"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "placeholder": "Enter your email address",
+    "button": "Login",
+    "welcomeMessage": "Welcome back, {{email}}!",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "forgottenEmail": {
+    "title": "Forgotten Email",
+    "description": "If you've forgotten your email address, please enter your first and last name below. We'll search our records and try to help you recover your account.",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNamePlaceholder": "Enter your last name",
+    "button": "Find My Email",
+    "successMessage": "We will try to email you {{firstName}} {{lastName}}..."
+  },
+  "language": {
+    "en": "English",
+    "ja": "日本語"
+  }
+}

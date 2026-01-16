@@ -1,0 +1,30 @@
+{
+  "common": {
+    "login": "ログイン",
+    "submit": "送信",
+    "loading": "読み込み中...",
+    "email": "メールアドレス",
+    "firstName": "名",
+    "lastName": "姓",
+    "forgottenEmail": "メールアドレスをお忘れですか？"
+  },
+  "login": {
+    "title": "おかえりなさい",
+    "placeholder": "メールアドレスを入力してください",
+    "button": "ログイン",
+    "welcomeMessage": "おかえりなさい、{{email}}さん！",
+    "invalidEmail": "有効なメールアドレスを入力してください"
+  },
+  "forgottenEmail": {
+    "title": "メールアドレスを忘れた",
+    "description": "メールアドレスをお忘れの場合は、以下に氏名を入力してください。記録を検索し、アカウントの回復をお手伝いします。",
+    "firstNamePlaceholder": "名を入力してください",
+    "lastNamePlaceholder": "姓を入力してください",
+    "button": "メールを検索",
+    "successMessage": "{{firstName}} {{lastName}}様にメールをお送りします..."
+  },
+  "language": {
+    "en": "English",
+    "ja": "日本語"
+  }
+}
