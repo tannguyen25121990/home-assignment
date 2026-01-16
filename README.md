@@ -86,6 +86,21 @@ Zustand provides a simpler API than Redux while maintaining powerful state manag
 
 Tailwind enables rapid UI development with utility-first classes. The custom design tokens (colors, animations) are defined in `tailwind.config.js`.
 
+## Production Concerns
+
+This project is a prototype. The following items would need attention for production use:
+
+| Area               | Current State               | Production Requirement                            |
+| ------------------ | --------------------------- | ------------------------------------------------- |
+| **Authentication** | Mock login (no real auth)   | Integrate with OAuth/JWT backend                  |
+| **API Endpoints**  | HTTPbin (demo only)         | Real backend API with proper error handling       |
+| **Translations**   | Machine-translated Japanese | Professional translation review                   |
+| **Error Handling** | Basic try/catch             | Error boundaries, user-friendly messages, logging |
+| **Security**       | No CSRF/XSS protection      | Implement security headers, input sanitization    |
+| **Analytics**      | None                        | Add analytics/monitoring (e.g., Sentry, GA)       |
+| **Accessibility**  | Basic a11y                  | Full WCAG 2.1 audit                               |
+| **Performance**    | Not optimized               | Image optimization, code splitting, caching       |
+
 ## Deployment
 
 The app is deployed on Vercel with CI/CD pipeline.
