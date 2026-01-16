@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button'
 import { Input } from '../components/ui/Input'
 import { Spinner } from '../components/ui/Spinner'
 
-type PageState = 'form' | 'loading' | 'success'
+type PageState = 'form' | 'fading' | 'loading' | 'success'
 
 export function ForgottenEmailPage() {
   const { t } = useTranslation()
@@ -34,6 +34,12 @@ export function ForgottenEmailPage() {
     e.preventDefault()
 
     if (!validate()) return
+
+    // Start fade-out animation
+    setPageState('fading')
+
+    // Wait for fade-out animation to complete
+    await new Promise((resolve) => setTimeout(resolve, 300))
 
     setPageState('loading')
 
@@ -71,7 +77,9 @@ export function ForgottenEmailPage() {
             </Link>
           </div>
         ) : (
-          <div className="flex flex-col md:flex-row animate-fade-in">
+          <div
+            className={`flex flex-col md:flex-row ${pageState === 'fading' ? 'animate-fade-out' : 'animate-fade-in'}`}
+          >
             {/* Left side - Explanation */}
             <div className="md:w-1/2 md:pr-6 mb-6 md:mb-0">
               <h1 className="text-2xl font-bold text-gray-800 mb-4">{t('forgottenEmail.title')}</h1>
@@ -107,7 +115,7 @@ export function ForgottenEmailPage() {
                   error={errors.lastName}
                 />
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full" disabled={pageState === 'fading'}>
                   {t('forgottenEmail.button')}
                 </Button>
 

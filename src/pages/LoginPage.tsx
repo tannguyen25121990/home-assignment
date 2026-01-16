@@ -10,7 +10,7 @@ import { useAuthStore } from '../store/authStore'
 // Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-type PageState = 'form' | 'loading' | 'success'
+type PageState = 'form' | 'fading' | 'loading' | 'success'
 
 export function LoginPage() {
   const { t } = useTranslation()
@@ -38,6 +38,12 @@ export function LoginPage() {
     e.preventDefault()
 
     if (!validateEmail(email)) return
+
+    // Start fade-out animation
+    setPageState('fading')
+
+    // Wait for fade-out animation to complete
+    await new Promise((resolve) => setTimeout(resolve, 300))
 
     setPageState('loading')
 
@@ -86,7 +92,10 @@ export function LoginPage() {
               <Spinner size="lg" />
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="animate-fade-in">
+            <form
+              onSubmit={handleSubmit}
+              className={pageState === 'fading' ? 'animate-fade-out' : 'animate-fade-in'}
+            >
               <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
                 {t('login.title')}
               </h1>
@@ -105,7 +114,7 @@ export function LoginPage() {
                 />
               </div>
 
-              <Button type="submit" className="w-full mb-4">
+              <Button type="submit" className="w-full mb-4" disabled={pageState === 'fading'}>
                 {t('login.button')}
               </Button>
 
