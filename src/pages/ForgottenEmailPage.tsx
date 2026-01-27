@@ -101,7 +101,7 @@ export function ForgottenEmailPage() {
                   }}
                   placeholder={t('forgottenEmail.firstNamePlaceholder')}
                   label={t('common.firstName')}
-                  error={errors.firstName ? t(errors.firstName) : undefined}
+                  error={errors.firstName ? t(errors.firstName) : ''}
                 />
 
                 <Input
@@ -112,7 +112,7 @@ export function ForgottenEmailPage() {
                   }}
                   placeholder={t('forgottenEmail.lastNamePlaceholder')}
                   label={t('common.lastName')}
-                  error={errors.lastName ? t(errors.lastName) : undefined}
+                  error={errors.lastName ? t(errors.lastName) : ''}
                 />
 
                 <Button type="submit" className="w-full" disabled={pageState === 'fading'}>
