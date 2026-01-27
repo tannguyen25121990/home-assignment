@@ -20,10 +20,10 @@ export function ForgottenEmailPage() {
     const newErrors: { firstName?: string; lastName?: string } = {}
 
     if (!firstName.trim()) {
-      newErrors.firstName = 'First name is required'
+      newErrors.firstName = 'forgottenEmail.firstNameRequired'
     }
     if (!lastName.trim()) {
-      newErrors.lastName = 'Last name is required'
+      newErrors.lastName = 'forgottenEmail.lastNameRequired'
     }
 
     setErrors(newErrors)
@@ -101,7 +101,7 @@ export function ForgottenEmailPage() {
                   }}
                   placeholder={t('forgottenEmail.firstNamePlaceholder')}
                   label={t('common.firstName')}
-                  error={errors.firstName}
+                  error={errors.firstName ? t(errors.firstName) : ''}
                 />
 
                 <Input
@@ -112,7 +112,7 @@ export function ForgottenEmailPage() {
                   }}
                   placeholder={t('forgottenEmail.lastNamePlaceholder')}
                   label={t('common.lastName')}
-                  error={errors.lastName}
+                  error={errors.lastName ? t(errors.lastName) : ''}
                 />
 
                 <Button type="submit" className="w-full" disabled={pageState === 'fading'}>

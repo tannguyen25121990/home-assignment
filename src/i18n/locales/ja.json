@@ -22,7 +22,9 @@
     "firstNamePlaceholder": "名を入力してください",
     "lastNamePlaceholder": "姓を入力してください",
     "button": "メールを検索",
-    "successMessage": "{{firstName}} {{lastName}}様にメールをお送りします..."
+    "successMessage": "{{firstName}} {{lastName}}様にメールをお送りします...",
+    "firstNameRequired": "名は必須です",
+    "lastNameRequired": "姓は必須です"
   },
   "language": {
     "en": "English",

@@ -29,6 +29,8 @@ vi.mock('react-i18next', async () => {
           'forgottenEmail.firstNamePlaceholder': 'Enter your first name',
           'forgottenEmail.lastNamePlaceholder': 'Enter your last name',
           'forgottenEmail.button': 'Find My Email',
+          'forgottenEmail.firstNameRequired': 'First name is required',
+          'forgottenEmail.lastNameRequired': 'Last name is required',
         }
         return translations[key] || key
       },

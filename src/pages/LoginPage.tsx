@@ -23,11 +23,11 @@ export function LoginPage() {
 
   const validateEmail = (value: string): boolean => {
     if (!value) {
-      setError(t('login.invalidEmail'))
+      setError('login.invalidEmail')
       return false
     }
     if (!EMAIL_REGEX.test(value)) {
-      setError(t('login.invalidEmail'))
+      setError('login.invalidEmail')
       return false
     }
     setError('')
@@ -109,7 +109,7 @@ export function LoginPage() {
                     if (error) setError('')
                   }}
                   placeholder={t('login.placeholder')}
-                  error={error}
+                  error={error ? t(error) : ''}
                   autoComplete="email"
                 />
               </div>

@@ -22,7 +22,9 @@
     "firstNamePlaceholder": "Enter your first name",
     "lastNamePlaceholder": "Enter your last name",
     "button": "Find My Email",
-    "successMessage": "We will try to email you {{firstName}} {{lastName}}..."
+    "successMessage": "We will try to email you {{firstName}} {{lastName}}...",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required"
   },
   "language": {
     "en": "English",
